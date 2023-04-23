@@ -9,4 +9,8 @@ interface PaletteColor{
 interface Palette{
     tertiary:PaletteColor
 }
+
+interface TypeBackground {
+    light:string
+}
 }
