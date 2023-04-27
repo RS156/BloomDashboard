@@ -8,9 +8,11 @@ type Props = {}
 
 const Navbar = (props: Props) => {
   const { palette } = useTheme()
+  
   const [selected, setSelected] = useState('dashboard')
   return (
-    <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.grey[300]} height='60px'>
+    <FlexBetween bgcolor={palette.background.default} mb="0.5rem" p="0.5rem 2rem" color={palette.grey[300]}
+    width='100%'  height='60px' position="sticky" top={0} zIndex="appBar" >
       {/* Left Side */}
       <FlexBetween gap="0.75rem">
         <Escalator sx={{ fontSize: "28px" }} />

@@ -11,6 +11,7 @@ interface Palette{
 }
 
 interface TypeBackground {
-    light:string
+    light:string,
+    main:string
 }
 }

@@ -1,6 +1,8 @@
-import DashboardBox from '@/components/DashboardBox'
+import { useGetKpisQuery } from '@/state/api'
 import { Box, useMediaQuery } from '@mui/material'
-import React from 'react'
+import Row1 from './Row1'
+import Row2 from './Row2'
+import Row3 from './Row3'
 
 type Props = {}
 const gridLayoutLargeScreens = `
@@ -21,17 +23,18 @@ const gridLayoutMediumScreens = `
 "a b"
 "a b"
 "a b"
-"d e"
-"d e"
-"d h"
+"c d"
+"c d"
+"c d"
+"e f"
+"e f"
+"g f"
 "g h"
 "g h"
-"g h"
-"c f"
-"c f"
-"c f"
-"i j"
-"i j"
+"i h"
+"i h"
+"j ."
+"j ."
 `
 
 
@@ -69,41 +72,37 @@ const gridLayoutSmallScreens =`
 `
 
 const Dashboard = (props: Props) => {
+    const {data }= useGetKpisQuery()
+    console.log(data);
+    
     const largeScreen = useMediaQuery('(min-width:1300px)')
     const mediumScreen = useMediaQuery('(min-width:1000px)')
     return (
-        <Box width='100%' height='100%'
+        <Box width='100%'
         gap='1.5rem' sx={largeScreen
             ?{
                 display: 'grid',
                 gridTemplateColumns: "repeat(3,minmax(370px, 1fr))",
-                gridTemplateRows: "repeat(10,minmax(55px, 1fr))",
+                gridTemplateRows: "repeat(10,minmax(60px, 1fr))",
                 gridTemplateAreas: gridLayoutLargeScreens
             }
             :mediumScreen?
             {
                 display: 'grid',
                 gridTemplateColumns: "repeat(2,minmax(370px, 1fr))",
-                gridTemplateRows: "repeat(15,minmax(55px, 1fr))",
+                gridTemplateRows: "repeat(16,minmax(60px, 1fr))",
                 gridTemplateAreas: gridLayoutMediumScreens
             }
             :{
                 display: 'grid',
                 gridAutoColumns: "1fr",
-                gridAutoRows:"55px",
+                gridAutoRows:"60px",
                 gridTemplateAreas: gridLayoutSmallScreens
             }
         }>
-            <DashboardBox bgcolor='#fff' gridArea='a'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='b'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='c'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='d'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='e'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='f'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='g'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='h'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='i'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='j'></DashboardBox>
+            <Row1/>
+            <Row2/>
+            <Row3/>            
         </Box>
     )
 }
