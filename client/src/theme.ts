@@ -14,7 +14,7 @@ export const tokens = {
         //light green
         100: "#d0fcf4",
         200: "#a0f9e9",
-        300: "#71f5de",
+        300: "#3fe5c9",
         400: "#41f2d3",
         500: "#12efc8",
         600: "#0ebfa0",

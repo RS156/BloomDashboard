@@ -82,7 +82,7 @@ const Dashboard = (props: Props) => {
             ?{
                 display: 'grid',
                 gridTemplateColumns: "repeat(3,minmax(370px, 1fr))",
-                gridTemplateRows: "repeat(10,minmax(60px, 1fr))",
+                gridTemplateRows: "repeat(10, 60px)",
                 gridTemplateAreas: gridLayoutLargeScreens
             }
             :mediumScreen?
