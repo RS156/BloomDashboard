@@ -7,7 +7,7 @@ loadType(mongoose)
 const monthSchema = new mongoose.Schema({
     month: String,
     revenue: {
-        type: mongoose.Types.Currency,       
+        type: mongoose.Types.Currency,
         get: (v) => (v / 100).toFixed(2)
     },
     expenses: {
@@ -22,7 +22,13 @@ const monthSchema = new mongoose.Schema({
         type: mongoose.Types.Currency,
         get: (v) => (v / 100).toFixed(2)
     }
-})
+},
+    {
+        toJSON: {
+            getters: true,
+            setters: true
+        }
+    })
 
 const dailySchema = new mongoose.Schema({
     date: {
@@ -40,7 +46,13 @@ const dailySchema = new mongoose.Schema({
         type: mongoose.Types.Currency,
         get: (v) => (v / 100).toFixed(2)
     }
-})
+},
+    {
+        toJSON: {
+            getters: true,
+            setters: true
+        }
+    })
 
 const expensesByCategorySchema = new mongoose.Schema({
     salaries: {
@@ -55,7 +67,13 @@ const expensesByCategorySchema = new mongoose.Schema({
         type: mongoose.Types.Currency,
         get: (v) => (v / 100).toFixed(2)
     }
-})
+},
+    {
+        toJSON: {
+            getters: true,
+            setters: true
+        }
+    })
 
 const kpiSchema = new mongoose.Schema({
     totalProfit: {

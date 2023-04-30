@@ -6,9 +6,9 @@ type Props = {}
 const Row2 = (props: Props) => {
     return (
         <>
-            <DashboardBox bgcolor='#fff' gridArea='d'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='e'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='f'></DashboardBox>
+            <DashboardBox gridArea='d'></DashboardBox>
+            <DashboardBox gridArea='e'></DashboardBox>
+            <DashboardBox gridArea='f'></DashboardBox>
         </>
     )
 }

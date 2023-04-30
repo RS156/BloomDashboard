@@ -72,8 +72,7 @@ const gridLayoutSmallScreens =`
 `
 
 const Dashboard = (props: Props) => {
-    const {data }= useGetKpisQuery()
-    console.log(data);
+    
     
     const largeScreen = useMediaQuery('(min-width:1300px)')
     const mediumScreen = useMediaQuery('(min-width:1000px)')

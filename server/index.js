@@ -21,11 +21,8 @@ mongoose.connect(process.env.MONGODB_URI, {
   console.log('MongoDB connected')
 
 /* only run it once */
-//await mongoose.connection.db.dropDatabase()
-// kpis.forEach( async kpi =>{
+// await mongoose.connection.db.dropDatabase()
 // await KPI.insertMany(kpis)
-//})
-
 })
 
 // Create an Express app

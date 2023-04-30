@@ -6,10 +6,10 @@ type Props = {}
 const Row3 = (props: Props) => {
     return (
         <>
-            <DashboardBox bgcolor='#fff' gridArea='g'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='h'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='i'></DashboardBox>
-            <DashboardBox bgcolor='#fff' gridArea='j'></DashboardBox>
+            <DashboardBox gridArea='g'></DashboardBox>
+            <DashboardBox gridArea='h'></DashboardBox>
+            <DashboardBox gridArea='i'></DashboardBox>
+            <DashboardBox gridArea='j'></DashboardBox>
         </>
     )
 }
