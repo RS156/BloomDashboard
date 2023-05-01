@@ -1,12 +1,12 @@
 import express from 'express'
 import KPI from '../models/Kpi.js'
 
-const kpiRouter = express.Router()
+const transactionRouter = express.Router()
 
-kpiRouter.get('/kpis', async (req, res) => {
+transactionRouter.get('/transactions', async (req, res) => {
     console.log('test');
 const KPIData =  await KPI.find({})
 res.status(200).json(KPIData)
 })
 
-export default kpiRouter
+export default transactionRouter

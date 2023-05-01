@@ -4,6 +4,7 @@ export const kpis = [
       totalProfit: "$212000.00",
       totalRevenue: "$283000.00",
       totalExpenses: "$71000.00",
+      targetRevenue: "$600000.00",
       monthlyData: [
         {
           month: "january",
@@ -462,6 +463,7 @@ export const kpis = [
         supplies: "$13000.00",
         services: "$10000.00",
       },
+      
     },
   ];
   

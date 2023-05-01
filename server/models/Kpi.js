@@ -88,9 +88,14 @@ const kpiSchema = new mongoose.Schema({
         type: mongoose.Types.Currency,
         get: (v) => (v / 100).toFixed(2)
     },
+    targetRevenue: {
+        type: mongoose.Types.Currency,
+        get: (v) => (v / 100).toFixed(2)
+    },
     monthlyData: [monthSchema],
     dailyData: [dailySchema],
-    expensesByCategory: [expensesByCategorySchema]
+    expensesByCategory: [expensesByCategorySchema],
+    
 }, {
     toJSON: {
         getters: true,
