@@ -83,8 +83,8 @@ const Row1 = (props: Props) => {
             <CartesianGrid vertical={false} stroke={palette.grey[800]} />
             <defs>
               <linearGradient id="colorRev" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor={palette.primary[300]} stopOpacity={0.5} />
-                <stop offset="95%" stopColor={palette.primary[300]} stopOpacity={0} />
+                <stop offset="5%" stopColor={palette.primary[200]} stopOpacity={0.7} />
+                <stop offset="95%" stopColor={palette.primary[200]} stopOpacity={0} />
               </linearGradient>
             </defs>
             <XAxis dataKey="month" tickLine={false} style={{ fontSize: '10px' }} />
