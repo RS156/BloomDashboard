@@ -41,3 +41,11 @@ export interface ProductResponse{
     transactions:Array<String>
 }
 
+export interface TransactionResponse{
+    _id:String,    
+    buyer:String,
+    amount:number,
+    productIds:Array<String>
+}
+
+

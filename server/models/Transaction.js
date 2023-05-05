@@ -9,8 +9,8 @@ const transactionSchema = new mongoose.Schema({
         get: (v) => (v / 100).toFixed(2)
     },
     buyer: {
-        type: mongoose.Types.Currency,
-        get: (v) => (v / 100).toFixed(2)
+        type: String,
+        required: true
     },
     productIds: [{
         type: mongoose.Types.ObjectId,

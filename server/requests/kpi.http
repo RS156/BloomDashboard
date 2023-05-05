@@ -2,3 +2,6 @@ GET http://localhost:3001/kpi/kpis
 
 ###
 GET http://localhost:3001/product/products
+
+###
+GET http://localhost:3001/transaction/transactions

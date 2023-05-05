@@ -20,9 +20,7 @@ const Row2 = (props: Props) => {
       price:Number(p.price),
       expense:Number(p.expense)
     }
-  ))
-  console.log(productData);
-  
+  )) 
 
   const targetRev = kpiData ? Math.round(kpiData[0].targetRevenue) : 600000
   const targetToReach = kpiData &&

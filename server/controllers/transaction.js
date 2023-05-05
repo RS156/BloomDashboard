@@ -1,12 +1,13 @@
 import express from 'express'
-import KPI from '../models/Kpi.js'
+import Transaction from '../models/Transaction.js'
 
 const transactionRouter = express.Router()
 
 transactionRouter.get('/transactions', async (req, res) => {
-    console.log('test');
-const KPIData =  await KPI.find({})
-res.status(200).json(KPIData)
+const transactionData =  await Transaction.find({})
+.limit(50)
+.sort({createdAt: -1})
+res.status(200).json(transactionData)
 })
 
 export default transactionRouter

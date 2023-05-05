@@ -69,11 +69,19 @@ const expensesByCategorySchema = new mongoose.Schema({
     }
 },
     {
-        toJSON: {
-            getters: true,
-            setters: true
+        "_id": false,
+        "toJSON": {
+            "getters": true,
+            "setters": true,
+            "transform": (doc, ret) => {
+                delete ret._id;
+                delete ret.id;
+                return ret;
+            }
         }
     })
+
+
 
 const kpiSchema = new mongoose.Schema({
     totalProfit: {
@@ -94,8 +102,8 @@ const kpiSchema = new mongoose.Schema({
     },
     monthlyData: [monthSchema],
     dailyData: [dailySchema],
-    expensesByCategory: [expensesByCategorySchema],
-    
+    expensesByCategory: expensesByCategorySchema,
+
 }, {
     toJSON: {
         getters: true,
