@@ -67,7 +67,7 @@ const Row2 = (props: Props) => {
       <DashboardBox gridArea='e'>
         <BoxHeader headline='Campaigns and Targets'
           secondaryText='+4%' />
-        <FlexBetween >
+        <FlexBetween gap='1rem'>
           <PieChart width={100} height={100} style={{flexBasis:'20%'}} >
             <Pie
               data={pieData}

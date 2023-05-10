@@ -15,7 +15,6 @@ import productRouter from './controllers/product.js'
 import transactionRouter from './controllers/transaction.js'
 // Load environment variables from a .env file
 dotenv.config();
-
 // Connect to MongoDB using Mongoose
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
