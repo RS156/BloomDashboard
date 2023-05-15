@@ -39,6 +39,7 @@ app.use(helmet())
 app.use(cors());
 app.use(morgan('common'));
 app.use(express.json()); // Add middleware for parsing JSON-encoded request bodies
+app.use(express.static('dist'))
 
 // Define a simple route
 app.use('/kpi', kpiRouter)
