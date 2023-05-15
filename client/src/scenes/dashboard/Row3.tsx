@@ -104,7 +104,10 @@ const Row3 = (props: Props) => {
                     },            
                     '& .MuiDataGrid-columnSeparator': {
                         visibility:'hidden !important' 
-                    }
+                    }, 
+                    '& .MuiButtonBase-root': {                       
+                        color: palette.grey[300],
+                    }, 
                 }}>
                     <DataGrid                     
                     rows={productData || []} columns={productColumns} 
