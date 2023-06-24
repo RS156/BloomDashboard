@@ -10,18 +10,6 @@
             "use": "@vercel/static"
         }
     ],
-    "env": {
-        "CI": "1"
-    },
-    "build": {
-        "env": {
-            "CI": "1"
-        },
-        "skipBuild": true,
-        "scripts": {
-            "build": "cd .. && cd server && npm i --force && cd .. && npm run build"
-        }
-    },
     "routes": [
         {
             "src": "/api/(.*)",
