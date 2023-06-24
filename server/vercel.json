@@ -18,7 +18,7 @@
             "CI": "1"
         },
         "scripts": {
-            "build": "npm ci --only=prod"
+            "build": "cd .. && cd server && npm ci --only=prod && cd .. && npm run build"
         }
     },
     "routes": [
