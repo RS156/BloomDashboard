@@ -13,17 +13,12 @@
     "env": {
         "CI": "1"
     },
-    "installConfig": {
-        "include": [
-            "dependencies"
-        ]
-    },
     "build": {
         "env": {
             "CI": "1"
         },
         "scripts": {
-            "build": "npm ci"
+            "build": "npm ci --only=prod"
         }
     },
     "routes": [
