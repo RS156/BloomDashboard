@@ -1,13 +1,13 @@
 {
     "version": 2,    
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "index.js"
-        },
+    "routes": [        
         {
             "src": "/",
             "dest": "dist/index.html"
+        },
+        {
+            "src": "/(.+)",
+            "dest": "index.js"
         }
     ]
 }
