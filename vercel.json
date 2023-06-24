@@ -1,0 +1,38 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "server/index.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "server/dist/**",
+            "use": "@vercel/static"
+        }
+    ],
+    "env": {
+        "CI": "1"
+    },
+    "build": {
+        "env": {
+            "CI": "1"
+        },
+        "scripts": {
+            "build": "cd server && npm i --force && cd .. && npm run build"
+        }
+    },
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "server/index.js"
+        },
+        {
+            "src": "/",
+            "dest": "server/dist/index.html"
+        },
+        {
+            "src": "/(.+)",
+            "dest": "server/dist/$1"
+        }
+    ]
+}
