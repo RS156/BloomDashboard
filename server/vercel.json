@@ -10,6 +10,22 @@
             "use": "@vercel/static"
         }
     ],
+    "env": {
+        "CI": "1"
+    },
+    "installConfig": {
+        "include": [
+            "dependencies"
+        ]
+    },
+    "build": {
+        "env": {
+            "CI": "1"
+        },
+        "scripts": {
+            "build": "npm ci"
+        }
+    },
     "routes": [
         {
             "src": "/api/(.*)",
