@@ -2,11 +2,11 @@
     "version": 2,
     "builds": [
         {
-            "src": "server/index.js",
+            "src": "./index.js",
             "use": "@vercel/node"
         },
         {
-            "src": "server/dist/**",
+            "src": "dist/**",
             "use": "@vercel/static"
         }
     ],
@@ -17,22 +17,23 @@
         "env": {
             "CI": "1"
         },
+        "skipBuild": true,
         "scripts": {
-            "build": "cd server && npm i --force && cd .. && npm run build"
+            "build": "cd .. && cd server && npm i --force && cd .. && npm run build"
         }
     },
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "server/index.js"
+            "dest": "index.js"
         },
         {
             "src": "/",
-            "dest": "server/dist/index.html"
+            "dest": "dist/index.html"
         },
         {
             "src": "/(.+)",
-            "dest": "server/dist/$1"
+            "dest": "dist/$1"
         }
     ]
 }
