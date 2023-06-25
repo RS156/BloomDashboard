@@ -42,9 +42,9 @@ app.use(express.json()); // Add middleware for parsing JSON-encoded request bodi
 app.use(express.static('dist'))
 
 // Define a simple route
-app.use('/kpi', kpiRouter)
-app.use('/product', productRouter)
-app.use('/transaction', transactionRouter)
+app.use('/api/kpi', kpiRouter)
+app.use('/api/product', productRouter)
+app.use('/api/transaction', transactionRouter)
 app.use(errorHandler)
 
 // Start the server

@@ -3,7 +3,7 @@ import { KpiResponse, ProductResponse, TransactionResponse } from './types'
 
 export const api = createApi({
     reducerPath:  'main',
-    baseQuery: fetchBaseQuery({baseUrl: import.meta.env.VITE_BASE_URL}),
+    baseQuery: fetchBaseQuery({baseUrl: `${import.meta.env.VITE_BASE_URL}/api`}),
     tagTypes:['Kpis', 'Products', 'Transactions'],
     endpoints:(builder)=>({
         getKpis : builder.query<Array<KpiResponse>, void>({
